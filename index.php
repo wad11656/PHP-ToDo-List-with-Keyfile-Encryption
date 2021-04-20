@@ -1,14 +1,14 @@
 <?php
-    // Create error variable
+	// Create error variable
 	$errors = "";
 
 	// Define includes
-    require_once __DIR__.'\vendor\autoload.php'; // Composer plugins
+	require_once __DIR__.'\vendor\autoload.php'; // Composer plugins
 	require_once("defuse-crypto.phar"); // "php-encryption" plugin
 
 	// Load .env (contains DB creds)
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
-    $dotenv->load();
+	$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
+	$dotenv->load();
 
 	// Grab .env decryption key
 	$keyContents = file_get_contents('C:\keyfile');
