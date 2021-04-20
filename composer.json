@@ -1,0 +1,7 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^4.2",
+        "symfony/dotenv": "^3.4",
+        "defuse/php-encryption": "^2.3"
+    }
+}
