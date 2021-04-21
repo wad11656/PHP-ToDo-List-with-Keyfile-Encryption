@@ -23,7 +23,7 @@
 	// MySQL connection variable
 	$db = mysqli_connect($server, $user, $pass, $database);
 
-	// insert a quote if submit button is clicked
+	// Add ToDo
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['task'])) {
 			$errors = "You must fill in the task";
@@ -33,6 +33,11 @@
 			mysqli_query($db, $sql);
 			header('location: index.php');
 		}
+	}
+	// Delete ToDo
+	if (isset($_GET['del_id'])) {
+		mysqli_query($db, "DELETE FROM todos_tbl WHERE todo_id=".$_GET['del_id']);
+		header('location: index.php');
 	}
 ?>
 
@@ -53,5 +58,46 @@
 		<input type="text" name="task" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
 	</form>
+
+    <table>
+        <thead>
+            <tr>
+				<th>ID</th>
+				<th style="width: 60px;">Task</th>
+				<th>Status</th>
+				<th>Creation Date</th>
+				<th>Due Date</th>
+				<th>&#128465;&#65039;</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<?php
+			// select all tasks if page is visited or refreshed
+			$todos = mysqli_query($db, "SELECT * FROM todos_tbl");
+			while ($row = mysqli_fetch_array($todos)) { ?>
+			<tr>
+				<td>
+					<?php echo $row['todo_id']; ?>
+				</td>
+				<td class="task">
+                    <?php echo $row['todo_task']; ?>
+				</td>
+				<td>
+                    <?php echo $row['todo_status']; ?>
+				</td>
+				<td>
+                    <?php echo $row['creation_date']; ?>
+				</td>
+				<td>
+                    <?php echo $row['due_date']; ?>
+				</td>
+				<td class="delete">
+					<a href="index.php?del_id=<?php echo $row['todo_id'] ?>">x</a>
+				</td>
+			</tr>
+			<?php } ?>
+        </tbody>
+    </table>
 </body>
 </html>
