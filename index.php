@@ -1,40 +1,27 @@
 <?php
-	// Create error variable
-	$errors = "";
+include 'db.incl.php';
 
-	// Define includes
-	require_once __DIR__.'\vendor\autoload.php'; // Composer plugins
-	require_once("defuse-crypto.phar"); // "php-encryption" plugin
+   echo '<script>console.log("Your stuff here")</script>';
 
-	// Load .env (contains DB creds)
-	$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
-	$dotenv->load();
-
-	// Grab .env decryption key
-	$keyContents = file_get_contents('C:\keyfile');
-	$key = Defuse\Crypto\Key::loadFromAsciiSafeString($keyContents);
-
-	// Decrypt DB creds stored in .env (using decryption key)
-	$server = Defuse\Crypto\Crypto::decrypt($_ENV['SERVER'], $key);
-	$user = Defuse\Crypto\Crypto::decrypt($_ENV['USER'], $key);
-	$pass = Defuse\Crypto\Crypto::decrypt($_ENV['PASS'], $key);
-	$database = Defuse\Crypto\Crypto::decrypt($_ENV['DATABASE'], $key);
-
-	// MySQL connection variable
-	$db = mysqli_connect($server, $user, $pass, $database);
-
-	// Add ToDo
+	// Add task
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['task'])) {
 			$errors = "You must fill in the task";
 		}else{
 			$task = $_POST['task'];
-			$sql = "INSERT INTO todos_tbl (todo_task) VALUES ('$task')";
+			$due_date = strtr($_POST['due_date'], '/', '-');
+			$due_date = date("Y-m-d", strtotime($due_date));
+			$cur_date = date('Y-m-d');
+
+			var_dump($POST['due_date']);
+
+			$sql = "INSERT INTO todos_tbl (todo_task, creation_date, due_date) VALUES ('$task', '$cur_date', '$due_date')";
 			mysqli_query($db, $sql);
 			header('location: index.php');
 		}
 	}
-	// Delete ToDo
+
+	// Delete task
 	if (isset($_GET['del_id'])) {
 		mysqli_query($db, "DELETE FROM todos_tbl WHERE todo_id=".$_GET['del_id']);
 		header('location: index.php');
@@ -45,17 +32,21 @@
 <html>
 <head>
 	<title>ToDo List Application PHP and MySQL</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Helvetica';">ToDo List Application PHP and MySQL database</h2>
+		<h2 style="font-family: 'Helvetica';">ToDo List Application PHP and MySQL database</h2>
 	</div>
 	<form method="post" action="index.php" class="input_form">
 	<?php if (isset($errors)) { ?>
 		<p><?php echo $errors; ?></p>
 	<?php } ?>
-		<input type="text" name="task" class="task_input">
+		<input type="text" name="task" class="task_input" placeholder="Task">
+		<input type="date" name="due_date" class="date_input" />
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
 	</form>
 
@@ -72,32 +63,43 @@
 		</thead>
 
 		<tbody>
-			<?php
-			// select all tasks if page is visited or refreshed
+            <?php
+			// Display ToDo table on page-load
 			$todos = mysqli_query($db, "SELECT * FROM todos_tbl");
-			while ($row = mysqli_fetch_array($todos)) { ?>
+			$i = 1; while ($row = mysqli_fetch_array($todos)) { ?>
 			<tr>
 				<td>
-					<?php echo $row['todo_id']; ?>
+					<!-- <?php echo $row['todo_id']; ?> -->
+                    <!-- Displaying non-database ID for cleaner appearance & minor vulnerability mitigation -->
+					<?php echo $i; ?>
 				</td>
 				<td class="task">
-                    <?php echo $row['todo_task']; ?>
+                    <div contenteditable="true" onblur="updateValue(this,'todo_task','<?php echo $row['todo_id'] ?>')">
+						<?php echo $row['todo_task']; ?>
+					</div>
 				</td>
 				<td>
-                    <?php echo $row['todo_status']; ?>
+						<select onchange="updateValue(this,'todo_status','<?php echo $row['todo_id'] ?>')">
+							<option value="pending" <?php echo $row['todo_status'] == 'pending' ? 'selected' : '' ?>>Pending</option>
+							<option value="completed" <?php echo $row['todo_status'] == 'completed' ? 'selected' : '' ?>>Completed</option>
+						</select>
 				</td>
 				<td>
-                    <?php echo $row['creation_date']; ?>
+                    <div contenteditable="true" onblur="updateValue(this,'creation_date','<?php echo $row['todo_id'] ?>')">
+                        <?php echo $row['creation_date']; ?>
+                    </div>
 				</td>
 				<td>
-                    <?php echo $row['due_date']; ?>
+					<input class="datepicker-input" value="<?php echo $row['due_date']; ?>" onchange="updateValue(this,'due_date','<?php echo $row['todo_id'] ?>')" />
 				</td>
 				<td class="delete">
 					<a href="index.php?del_id=<?php echo $row['todo_id'] ?>">x</a>
 				</td>
 			</tr>
-			<?php } ?>
+			<?php $i++;
+            } ?>
         </tbody>
     </table>
 </body>
 </html>
+<script src="functions.js"></script>

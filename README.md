@@ -13,8 +13,26 @@
 ##### Encrypt/Decrypt .env contents:
 [https://www.codementor.io/@ccornutt/keeping-credentials-secure-in-php-kvcbrk55z]()
 
-##### Create MySQL table via command line:
+##### Create MySQL tables via command line:
 [https://www.tutorialspoint.com/mysql/mysql-create-tables.htm]()
+
+##### Change tutorial's incorrect `font-style: Helvetica` to `font-family: Helvetica`:
+[https://stackoverflow.com/questions/32515519/css-invalid-property-value]()
+
+##### Fix `due_date` incorrectly saving into databasae as `1970-01-01` every time:
+[https://stackoverflow.com/a/8984620/3511695]()
+
+##### PHP+MySQL - Insert multiple records:
+[https://www.w3schools.com/php/php_mysql_insert_multiple.asp]()
+
+##### Create textbox placeholder text:
+[https://stackoverflow.com/questions/108207/how-do-i-make-an-html-text-box-show-a-hint-when-empty]()
+
+##### `mysqli_query` `try{}catch(){}` syntax:
+[https://www.php.net/manual/en/mysqli-driver.report-mode.php]()
+
+##### Update MySQL via JQuery+Ajax after datepicker `onchange`:
+[https://stackoverflow.com/a/28684832/3511695]()
 
 ### Environment Setup
 
@@ -41,6 +59,9 @@
 
 ##### Reminder to allow external HTTP requests to app in web host firewall settings:
 [https://stackoverflow.com/a/19117653/3511695]()
+
+##### Install JQuery
+[https://www.w3schools.com/jquery/jquery_get_started.asp]()
 
 ### Versioning
 
