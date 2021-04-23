@@ -74,20 +74,18 @@ include 'db.incl.php';
 					<?php echo $i; ?>
 				</td>
 				<td class="task">
-                    <div contenteditable="true" onblur="updateValue(this,'todo_task','<?php echo $row['todo_id'] ?>')">
+                    <div contenteditable="true" spellcheck="false" onblur="updateValue(this,'todo_task','<?php echo $row['todo_id'] ?>')">
 						<?php echo $row['todo_task']; ?>
 					</div>
 				</td>
 				<td>
 						<select onchange="updateValue(this,'todo_status','<?php echo $row['todo_id'] ?>')">
-							<option value="pending" <?php echo $row['todo_status'] == 'pending' ? 'selected' : '' ?>>Pending</option>
-							<option value="completed" <?php echo $row['todo_status'] == 'completed' ? 'selected' : '' ?>>Completed</option>
+							<option value="pending" <?php if($row['todo_status'] == 'pending'){ echo 'selected';} ?>>Pending</option>
+							<option value="complete" <?php if ($row['todo_status'] == 'complete'){ echo 'selected';} ?>>Complete</option>
 						</select>
 				</td>
 				<td>
-                    <div contenteditable="true" onblur="updateValue(this,'creation_date','<?php echo $row['todo_id'] ?>')">
                         <?php echo $row['creation_date']; ?>
-                    </div>
 				</td>
 				<td>
 					<input class="datepicker-input" value="<?php echo $row['due_date']; ?>" onchange="updateValue(this,'due_date','<?php echo $row['todo_id'] ?>')" />

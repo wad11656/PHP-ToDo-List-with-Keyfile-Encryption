@@ -34,6 +34,12 @@
 ##### Update MySQL via JQuery+Ajax after datepicker `onchange`:
 [https://stackoverflow.com/a/28684832/3511695]()
 
+##### JQuery - Extract value from `input` tag
+[https://api.jquery.com/val/]()
+
+##### Disable spellcheck underlines
+[https://www.tutorialrepublic.com/faq/how-to-disable-spell-checking-in-html-forms.php]()
+
 ### Environment Setup
 
 ##### Install PHP for NginX:
