@@ -3,14 +3,10 @@ if (session_status() === PHP_SESSION_NONE){session_start();}
 if (isset($_POST['filter'])){$_SESSION['filter'] = $_POST['filter'];}
 include 'db.incl.php';
 
-printf($_SERVER['REQUEST_URI']);
-printf($_SERVER['QUERY_STRING']);
-   echo '<script>console.log("Your stuff here")</script>';
-
 	// Add task
 	if (isset($_POST['submit'])) {
-		if (empty($_POST['task'])) {
-			$errors = "You must fill in the task";
+		if (empty($_POST['task']) || empty($_POST['due_date'])) {
+			$errors = "You must fill in the task and due date fields.";
 		}else{
 			$task = $_POST['task'];
 			$due_date = strtr($_POST['due_date'], '/', '-');
@@ -57,7 +53,8 @@ printf($_SERVER['QUERY_STRING']);
 		<p><?php echo $errors; ?></p>
 	<?php } ?>
 		<input type="text" name="task" class="task_input" placeholder="Task">
-		<input type="date" name="due_date" class="date_input" min="<?php echo date("Y-m-d", time() + -6 * 60 * 60); ?>" />
+		<label for="due_date">Due Date:</label>
+		<input type="date" name="due_date" class="date_input" placeholder="Due Date" min="<?php echo date("Y-m-d", time() + -6 * 60 * 60); ?>" />
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
 	</form>
 	            <?php
@@ -87,10 +84,10 @@ printf($_SERVER['QUERY_STRING']);
         <thead>
             <tr>
 				<th>#</th>
-				<th style="width: 60px;"><a href="index.php?column=todo_task&order=<?php echo $asc_or_desc; ?>">Task<i class="fas fa-sort<?php if($column == 'todo_task'){echo '-' . $up_or_down;} ?>"></i></a></th>
-				<th><a href="index.php?column=todo_status&order=<?php echo $asc_or_desc; ?>">Status<i class="fas fa-sort<?php if($column == 'todo_status'){echo '-' . $up_or_down;} ?>"></i></a></th>
-				<th><a href="index.php?column=creation_date&order=<?php echo $asc_or_desc; ?>">Creation Date<i class="fas fa-sort<?php if($column == 'creation_date'){echo '-' . $up_or_down;} ?>"></i></a></th>
-				<th><a href="index.php?column=due_date&order=<?php echo $asc_or_desc; ?>">Due Date<i class="fas fa-sort<?php if($column == 'due_date'){echo '-' . $up_or_down;} ?>"></i></a></th>
+				<th style="width: 60px;"><a href="index.php?column=todo_task&order=<?php echo $asc_or_desc; ?>">Task <i class="fas fa-sort<?php if($column == 'todo_task'){echo '-' . $up_or_down;} ?>"></i></a></th>
+				<th><a href="index.php?column=todo_status&order=<?php echo $asc_or_desc; ?>">Status <i class="fas fa-sort<?php if($column == 'todo_status'){echo '-' . $up_or_down;} ?>"></i></a></th>
+				<th><a href="index.php?column=creation_date&order=<?php echo $asc_or_desc; ?>">Creation Date <i class="fas fa-sort<?php if($column == 'creation_date'){echo '-' . $up_or_down;} ?>"></i></a></th>
+				<th><a href="index.php?column=due_date&order=<?php echo $asc_or_desc; ?>">Due Date <i class="fas fa-sort<?php if($column == 'due_date'){echo '-' . $up_or_down;} ?>"></i></a></th>
 				<th>&#128465;&#65039;</th>
 			</tr>
 		</thead>
@@ -114,9 +111,9 @@ printf($_SERVER['QUERY_STRING']);
 							<option value="complete" <?php if ($row['todo_status'] == 'complete'){ echo 'selected';} ?>>Complete</option>
 						</select>
 				</td>
-				<td>
+				<td><nobr>
                         <?php echo $row['creation_date']; ?>
-				</td>
+				</nobr></td>
 				<td>
 					<input class="datepicker-input" value="<?php echo $row['due_date']; ?>" onchange="updateValue(this,'due_date','<?php echo $row['todo_id'] ?>')" />
 				</td>

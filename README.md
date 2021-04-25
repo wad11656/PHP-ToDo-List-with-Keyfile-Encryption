@@ -67,6 +67,15 @@
 ##### Set time zone on datepicker:
 [https://stackoverflow.com/a/62542096/3511695]()
 
+##### Word wrap in `<td>`:
+[https://stackoverflow.com/a/50880544/3511695]()
+
+##### Prevent line break at hyphen (for `creation_date`):
+[https://stackoverflow.com/a/28928832/3511695]()
+
+##### Button hover color transition:
+[https://www.w3schools.com/howto/howto_css_transition_hover.asp]()
+
 ### Environment Setup
 
 ##### Install PHP for NginX:
