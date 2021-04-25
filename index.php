@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE){session_start();}
 if (isset($_POST['filter'])){$_SESSION['filter'] = $_POST['filter'];}
 include 'db.incl.php';
-
+//
 	// Add task
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['task']) || empty($_POST['due_date'])) {
