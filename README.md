@@ -13,8 +13,59 @@
 ##### Encrypt/Decrypt .env contents:
 [https://www.codementor.io/@ccornutt/keeping-credentials-secure-in-php-kvcbrk55z]()
 
-##### Create MySQL table via command line:
+##### Create MySQL tables via command line:
 [https://www.tutorialspoint.com/mysql/mysql-create-tables.htm]()
+
+##### Change tutorial's incorrect `font-style: Helvetica` to `font-family: Helvetica`:
+[https://stackoverflow.com/questions/32515519/css-invalid-property-value]()
+
+##### Fix `due_date` incorrectly saving into databasae as `1970-01-01` every time:
+[https://stackoverflow.com/a/8984620/3511695]()
+
+##### PHP+MySQL - Insert multiple records:
+[https://www.w3schools.com/php/php_mysql_insert_multiple.asp]()
+
+##### Create textbox placeholder text:
+[https://stackoverflow.com/questions/108207/how-do-i-make-an-html-text-box-show-a-hint-when-empty]()
+
+##### `mysqli_query` `try{}catch(){}` syntax:
+[https://www.php.net/manual/en/mysqli-driver.report-mode.php]()
+
+##### Update MySQL via JQuery+Ajax after datepicker `onchange`:
+[https://stackoverflow.com/a/28684832/3511695]()
+
+##### JQuery - Extract value from `input` tag:
+[https://api.jquery.com/val/]()
+
+##### Disable spellcheck underlines:
+[https://www.tutorialrepublic.com/faq/how-to-disable-spell-checking-in-html-forms.php]()
+
+##### Ternary if-else examples:
+[https://stackoverflow.com/questions/28602388/ternary-operator-in-php-with-echo-value]()
+
+##### Display MySQL errors (`mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in...`):
+[https://stackoverflow.com/questions/15439919/mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-given-in]()
+
+##### PHP - Sort table:
+[https://codeshack.io/how-to-sort-table-columns-php-mysql/]()
+
+##### When data's stored in `$_GET` vs `$_POST`:
+[https://stackoverflow.com/a/42942572/3511695]()
+
+##### Check if PHP `$_SESSION` is already set:
+[https://stackoverflow.com/a/10093292/3511695]()
+
+##### PHP - Concatenate strings:
+[https://www.codecademy.com/forum_questions/54329217548c35920e0081b7]()
+
+##### Get URL query string:
+[https://stackoverflow.com/questions/6768793/get-the-full-url-in-php]()
+
+##### Using prepared statements:
+[https://stackoverflow.com/a/51015777/3511695]()
+
+##### Set time zone on datepicker:
+[https://stackoverflow.com/a/62542096/3511695]()
 
 ### Environment Setup
 
@@ -41,6 +92,9 @@
 
 ##### Reminder to allow external HTTP requests to app in web host firewall settings:
 [https://stackoverflow.com/a/19117653/3511695]()
+
+##### Install JQuery:
+[https://www.w3schools.com/jquery/jquery_get_started.asp]()
 
 ### Versioning
 
