@@ -1,8 +1,17 @@
 # kadince_todo
 
+## Setup
+
+1. Run `git clone https://github.com/wad11656/kadince_todo.git` where you want the project directory to be stored.
+2. Start the MySQL console with `mysql` then execute `create_table.sql` on your server.
+3. Edit `create_env.php` and replace `myserver`, `mydbuser`, `mypass`, and `mydatabase` with your respective database credentials.
+4. Load `create_env.php` in your browser.
+    - If permissions are configured to allow it, this should generate a `.env` in the directory above your site root, and a `keyfile` at either `C:\keyfile` or `/usr/local/keyfile`.
+5. Load `index.php`.
+
 ## Resources
 
-### Coding
+<details><summary>Coding</summary>
 
 ##### PHP + MySQL ToDo Tutorial:
 [https://codewithawa.com/posts/to-do-list-application-using-php-and-mysql-database]()
@@ -76,7 +85,14 @@
 ##### Button hover color transition:
 [https://www.w3schools.com/howto/howto_css_transition_hover.asp]()
 
-### Environment Setup
+##### PHP - Put contents in local file:
+[https://stackoverflow.com/questions/5440912/how-to-put-the-a-string-into-a-text-file-in-php]()
+
+##### PHP - Detect OS:
+[https://stackoverflow.com/a/57843610/3511695]()
+</details>
+
+<details><summary>Environment Setup</summary>
 
 ##### Install PHP for NginX:
 [https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-ubuntu-18-04#]()
@@ -105,7 +121,11 @@
 ##### Install JQuery:
 [https://www.w3schools.com/jquery/jquery_get_started.asp]()
 
-### Versioning
+##### Run `.sql` script to configure database:
+[https://stackoverflow.com/questions/7616520/how-to-execute-a-sql-script-from-bash]()
+</details>
+
+<details><summary>Versioning</summary>
 
 ##### Using GitHub CLI tool:
 [https://www.youtube.com/watch?v=tm9gdHd9qmE]()
@@ -115,3 +135,4 @@
 
 ##### Git Branching & Merging:
 [https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging]()
+</details>
