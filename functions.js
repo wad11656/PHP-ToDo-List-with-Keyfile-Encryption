@@ -27,6 +27,8 @@ function updateValue(element, column_name, todo_id) {
 
 /* Datepicker config (due_date) */
 $('.datepicker-input').datepicker({
-	dateFormat: "yy-mm-dd", // Transform date into MySQL DATE format
-	minDate: 0 // Don't allow dates before today
+	// Transform date into MySQL DATE format
+	dateFormat: "yy-mm-dd",
+	// Don't allow dates before today
+	minDate: 0
 });
