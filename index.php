@@ -39,11 +39,11 @@ include 'db.incl.php';
 <html>
 <head>
     <title>ToDo List Application PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="jquery-ui.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
     <div class="heading">
@@ -135,4 +135,4 @@ include 'db.incl.php';
 </body>
 </html>
 
-<script src="functions.js"></script>
+<script src="js/functions.js"></script>
