@@ -6,14 +6,14 @@ mysqli_report(MYSQLI_REPORT_OFF);
     require_once("defuse-crypto.phar"); // "php-encryption" plugin
 
     // Load .env credentials (encrypted)
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../env/');
     $dotenv->load();
 
     // Load .env decryption key
     if (PHP_OS_FAMILY === "Windows"){
         $keyContents = file_get_contents('C:\keyfile');
     } else {
-        $keyContents = file_get_contents('/usr/local/keyfile');
+        $keyContents = file_get_contents('/usr/local/keyfile/keyfile');
     }
     $key = Defuse\Crypto\Key::loadFromAsciiSafeString($keyContents);
 
