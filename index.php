@@ -47,7 +47,7 @@ include 'db.incl.php';
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-family: 'Helvetica';">ToDo List Application PHP and MySQL database</h2>
+		<h2 style="font-family: 'Helvetica';">My ToDo List</h2>
 	</div>
 	<!-- New task form -->
 	<form method="post" action="index.php" class="input_form">
