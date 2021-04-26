@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS kadince_todo;
+CREATE DATABASE IF NOT EXISTS mydatabase;
 USE kadince_todo;
 DROP TABLE IF EXISTS `todos_tbl`;
 CREATE TABLE IF NOT EXISTS `todos_tbl` (
@@ -9,3 +9,4 @@ CREATE TABLE IF NOT EXISTS `todos_tbl` (
   `due_date` date DEFAULT NULL,
   PRIMARY KEY (`todo_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+GRANT SELECT, INSERT, UPDATE, DELETE ON mydatabase TO mydbuser@'myserver' IDENTIFIED BY 'mypass';
