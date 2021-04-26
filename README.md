@@ -5,10 +5,14 @@
 1. Run `git clone https://github.com/wad11656/kadince_todo.git` where you want the project directory to be stored.
 2. Edit `create_table.sql` and replace `mydatabase`(x2), `mydbuser`, `myserver`, and `mypass` with your respective database credentials.
 3. Execute the commands in `create_table.sql` on your server, either in a MySQL front-end or the `mysql` console.
-4. Edit `create_env.php` and replace `myserver`, `mydbuser`, `mypass`, and `mydatabase` with your respective database credentials.
-5. Load `create_env.php` in your browser.
-    - If permissions are configured to allow it, this should generate a `.env` in the directory above your site root, and a `keyfile` at either `C:\keyfile` or `/usr/local/keyfile`.
-6. Load `index.php`.
+4. **(Unix only)** From your site root directory, run `sudo mkdir ../env` and assign the new directory privileges to allow one of this site's `php` pages to write a file to it.
+    - If using Nginx+PHP-FPM, this means running `chown www-data:www-data ../env`.
+5. **(Unix only)** Run `sudo mkdir /usr/local/keyfile` and assign the new directory privileges to allow one of this site's `php` pages to write to it.
+    - If using Nginx+PHP-FPM, this means running `chown www-data:www-data /usr/local/keyfile`.
+6. Edit `create_env.php` and replace `myserver`, `mydbuser`, `mypass`, and `mydatabase` with your respective database credentials.
+7. Execute `create_env.php` on your server.
+    - If permissions are configured to allow it, this should generate a `.env` in the `env` directory above your site root, and a `keyfile` at either `C:\keyfile` or `/usr/local/keyfile/keyfile`.
+8. Load `index.php`.
 
 ## Resources
 
@@ -122,8 +126,11 @@
 ##### Install JQuery:
 [https://www.w3schools.com/jquery/jquery_get_started.asp]()
 
-##### Run `.sql` script to configure database:
+##### Run `.sql` script from bash:
 [https://stackoverflow.com/questions/7616520/how-to-execute-a-sql-script-from-bash]()
+
+##### Run `.sql` script from `mysql>`:
+[https://stackoverflow.com/a/8940431/3511695]()
 </details>
 
 <details><summary>Versioning</summary>
