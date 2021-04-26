@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS mydatabase;
-USE kadince_todo;
+USE mydatabase;
 DROP TABLE IF EXISTS `todos_tbl`;
 CREATE TABLE IF NOT EXISTS `todos_tbl` (
   `todo_id` int NOT NULL AUTO_INCREMENT,

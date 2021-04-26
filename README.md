@@ -3,7 +3,7 @@
 ## Setup
 
 1. Run `git clone https://github.com/wad11656/kadince_todo.git` where you want the project directory to be stored.
-2. Edit `create_table.sql` and replace `mydatabase`(x2), `mydbuser`, `myserver`, and `mypass` with your respective database credentials.
+2. Edit `create_table.sql` and replace `mydatabase`(x3), `mydbuser`, `myserver`, and `mypass` with your respective database credentials.
 3. Execute the commands in `create_table.sql` on your server, either in a MySQL front-end or the `mysql` console.
 4. Edit `create_env.php` and replace `myserver`, `mydbuser`, `mypass`, and `mydatabase` with your respective database credentials.
 5. Load `create_env.php` in your browser.
