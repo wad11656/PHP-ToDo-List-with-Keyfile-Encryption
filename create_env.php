@@ -44,7 +44,7 @@ if (PHP_OS_FAMILY === "Windows"){
     };
 }
 else {
-    if(file_exists('/usr/local/keyfile')){
+    if(file_exists('/usr/local/keyfile/keyfile')){
         echo 'SUCCESS: /usr/local/keyfile/keyfile exists.<br />';
     } else {
         echo 'FAILURE: /usr/local/keyfile/keyfile wasn\'t detected.';
