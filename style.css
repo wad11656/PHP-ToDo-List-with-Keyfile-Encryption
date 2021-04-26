@@ -1,137 +1,137 @@
 .heading {
-	width: 70%;
-	margin: 30px auto;
-	text-align: center;
-	color: #f5f5f5;
-	background: #697cce;
-	border: 2px solid #5263ad;
-	border-radius: 5px;
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    color: #f5f5f5;
+    background: #697cce;
+    border: 2px solid #5263ad;
+    border-radius: 5px;
 }
 
 .input_form {
-	width: 68%;
-	margin: 30px auto;
-	border-radius: 5px;
-	padding: 1%;
-	background: #697cce;
-	border: 1px solid #5263ad;
-	font-family: Arial, Helvetica, sans-serif;
+    width: 68%;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding: 1%;
+    background: #697cce;
+    border: 1px solid #5263ad;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
-	color: #f5f5f5;
-	text-decoration: none;
+    color: #f5f5f5;
+    text-decoration: none;
 }
 
 form p {
-	color: red;
-	margin: 0px;
+    color: red;
+    margin: 0px;
 }
 
 .filter_form{
-	padding-left: 15%;
+    padding-left: 15%;
 }
 
 .task_input {
-	width: 40%;
-	height: 15px;
-	padding: 2%;
-	border: 2px solid #5263ad;
+    width: 40%;
+    height: 15px;
+    padding: 2%;
+    border: 2px solid #5263ad;
 }
 
 .date_input {
-	width: 20%;
-	height: 15px;
-	padding: 2%;
-	border: 2px solid #5263ad;
+    width: 20%;
+    height: 15px;
+    padding: 2%;
+    border: 2px solid #5263ad;
 }
 
 .add_btn {
-	width: 15%;
-	height: 45px;
-	background: #697cce;
-	color: #f5f5f5;
-	border: 2px solid #5263ad;
-	border-radius: 5px;
-	padding: 1%;
-	transition: 0.5s;
+    width: 15%;
+    height: 45px;
+    background: #697cce;
+    color: #f5f5f5;
+    border: 2px solid #5263ad;
+    border-radius: 5px;
+    padding: 1%;
+    transition: 0.5s;
 }
 
 .add_btn:hover {
-	background-color: #f5f5f5;
-	color: #697cce;
-	cursor: pointer;
+    background-color: #f5f5f5;
+    color: #697cce;
+    cursor: pointer;
 }
 
 label {
-	color: #f5f5f5;
+    color: #f5f5f5;
 }
 
 table {
-	width: 70%;
-	margin: 30px auto;
-	border-collapse: collapse;
-	font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 tbody td:nth-of-type(odd),
 thead th:nth-of-type(odd){
-	background-color: #697cce
+    background-color: #697cce
 }
 
 tbody td:nth-of-type(even),
 thead th:nth-of-type(even) {
-	background-color: #5263ad
+    background-color: #5263ad
 }
 
 th, td{
-	border: none;
+    border: none;
     height: 30px;
     padding: 5px;
 }
 
 th {
-	font-size: 19px;
-	color: #f5f5f5;
+    font-size: 19px;
+    color: #f5f5f5;
 }
 
 td {
-	color: gold;
-	padding-left: 10px;
+    color: gold;
+    padding-left: 10px;
 }
 
 tr {
-	border-bottom: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
 }
 
 tr:hover {
-	background: #E9E9E9;
+    background: #E9E9E9;
 }
 
 .task {
-	text-align: left;
-	word-break: break-all;
-	width:70%;
+    text-align: left;
+    word-break: break-all;
+    width:70%;
 }
 
 .datepicker-input, select {
-	background-color: #697cce;
-	border: none;
-	color: gold;
-	font-size: 16px;
+    background-color: #697cce;
+    border: none;
+    color: gold;
+    font-size: 16px;
 }
 
 .datepicker-input {
-	width: 95px;
+    width: 95px;
 }
 .delete{
-	text-align: center;
+    text-align: center;
 }
 
 .delete a{
-	color: white;
-	background: #a52a2a;
-	padding: 1px 6px;
-	border-radius: 3px;
-	text-decoration: none;
+    color: white;
+    background: #a52a2a;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
 }
