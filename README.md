@@ -12,7 +12,8 @@
 6. Edit `create_env.php` and replace `myserver`, `mydbuser`, `mypass`, and `mydatabase` with your respective database credentials.
 7. Execute `create_env.php` on your server.
     - If permissions are configured to allow it, this should generate a `.env` in the `env` directory above your site root, and a `keyfile` at either `C:\keyfile` or `/usr/local/keyfile/keyfile`.
-8. Load `index.php`.
+8. Load `index.php` and test all is working.
+9. Delete your plaintext credentials from `create_env.php` and `create_table.sql`.
 
 ## Resources
 
