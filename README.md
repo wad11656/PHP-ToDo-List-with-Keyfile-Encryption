@@ -1,7 +1,7 @@
 # kadince_todo
 
 ## Background
-This was for the coding challenge that the software development company Kadince administered to me. They were unimpressed with the decision to use PHP and didn't talk about my code much at all in the interview.
+This was for the coding challenge that the software development company Kadince administered to me. They seemed unimpressed with the decision to use PHP and didn't talk about my code at all in the interview. I went the extra mile to learn how to encrypt the database credentials in a keyfile, then store that file on the server outside of the site's directory (so it couldn't be accessed from the web site itself), which steps to reproduce are in the setup instructions below.
 
 ## Requirements
 > The next step in the hiring process it to build your own implementation of a To-do (Task list) full stack web application following these guidelines:
