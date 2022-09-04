@@ -1,5 +1,19 @@
 # kadince_todo
 
+## Background
+This was for the coding challenge that the software development company Kadince administered to me. They were unimpressed with the decision to use PHP and didn't talk about my code much at all in the interview.
+
+## Requirements
+> The next step in the hiring process it to build your own implementation of a To-do (Task list) full stack web application following these guidelines:
+
+> Build the implementation in 1 week while meeting at least the minimum functionality requirements:
+
+> - View a list of to-do items with the ability to filter the list by pending, complete, and all to-dos
+> - Create a new to-do item
+> - Edit a to-do item
+> - Delete a to-do item
+> - Complete a to-do item
+
 ## Setup
 
 1. Run `git clone https://github.com/wad11656/kadince_todo.git` where you want the project directory to be stored.
