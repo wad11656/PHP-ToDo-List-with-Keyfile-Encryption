@@ -1,7 +1,9 @@
 # kadince_todo
 
 ## Background
-This was for the coding challenge that the software development company Kadince administered to me. They seemed unimpressed with the decision to use PHP and didn't talk about my code at all in the interview. I went the extra mile to learn how to encrypt the database credentials in a keyfile, then store that file on the server outside of the site's directory (so it couldn't be accessed from the web site itself), which steps to reproduce are in the setup instructions below.
+This was for the coding challenge that the software development company Kadince administered to me. They were unimpressed with the decision to use PHP and didn't talk about this code at all in the interview (which code I was proud of). I went the extra mile to learn how to encrypt the database credentials in a keyfile, then store that file on the server outside of the site's directory (so it couldn't be accessed from the web site itself), which steps to reproduce are in the setup instructions below.
+
+This was my first real programming interview. It was terrible. I didn't come into the interview prepared with a particular programming language in mind. My programming education had us flip-flopping between 5+ languages and frameworks, so we never had the opportunity to truly become comfortable in 1 single language or framework. So when the interviewers asked me to whiteboard, I mixed up the syntaxes between all the various languages that were swimming around in my head: my variable delcarations and loops where in the syntax of any 2 different languages! (Wow.) My severe social anxiety and then-undiagnosed ADHD also made my brain come to a halt, as it always does around other people (especially in a high-stress situation like a job interview), so I couldn't think critically enough to solve their whiteboard exercises in a non-embarrassing amount of time.
 
 ## Requirements
 > The next step in the hiring process it to build your own implementation of a To-do (Task list) full stack web application following these guidelines:
