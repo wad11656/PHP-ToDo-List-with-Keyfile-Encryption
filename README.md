@@ -4,17 +4,16 @@
 <img src="https://raw.githubusercontent.com/wad11656/kadince_todo/main/Demo.gif" width="500"/>
 
 ## Background
-This was for the coding challenge that the software development company Kadince administered to me. They were unimpressed (visibly confused/judgmental) with the decision to use PHP and, other than that, didn't talk about this code at all in the interview. Admittedly, when they asked me why I chose PHP, I told them it was because it was the first language that appeared on Google (the first link under [Resources](https://github.com/wad11656/kadince_todo/blob/main/README.md#resources)) when I searched for guides on creating a web page with a ToDo list using MySQL (the db structure I'm most familiar with). Derp! Obviously I should have researched which frameworks were most popular and built my project off one of those. Nevertheless, I was proud of the work I did, and how conscientious I was in adding security and quality-of-life implementations that were not asked for (which implementations were never brought up in the interview):
+This was for the coding challenge that the software development company Kadince administered to me. They were unimpressed (visibly confused/judgmental) with the decision to use PHP and, other than that, didn't talk about this code at all in the interview. Admittedly, when they asked me why I chose PHP, I told them it was because it was used in the most accessible guide I found on Google (the first link under [Resources](https://github.com/wad11656/kadince_todo/blob/main/README.md#resources)) when I searched for guides on creating a web page with a ToDo list using MySQL (the db structure I'm most familiar with). Derp! Obviously I should have researched which frameworks were most popular and built my project off one of those. Nevertheless, I was proud of the work I did, and how conscientious I was in adding security and quality-of-life implementations that were not asked for (which implementations were never brought up in the interview):
 
  - I went the extra mile to learn how to encrypt the database credentials into a keyfile, then store that file on the server outside of the site's directory (so it couldn't be accessed from potential hackers on the web site itself), which steps to reproduce are in the [Setup](https://github.com/wad11656/kadince_todo/blob/main/README.md#setup) instructions below.
   - I also made careful efforts to document all the resources I used to put this project together (under [Resources](https://github.com/wad11656/kadince_todo/blob/main/README.md#resources)).
   - I also went the extra step of limiting the datepicker to dates from today, onwards.
   - I also used [Prepared Statements](https://www.w3schools.com/php/php_mysql_prepared_statements.asp) to try to prevent SQL injections.
 
- But since I used a language they don't actively develop in, they were uninterested and unimpressed.
-
-### The interview itself
+<details><summary><h3>The Interview Itself</h3></summary>
 This was my first real programming interview. It went terribly. I didn't come into the interview prepared with a particular programming language in mind. (My programming education had us flip-flopping between 5+ languages and frameworks, so we never had the opportunity to truly become comfortable in 1 single language or framework.) So when the interviewers asked me to whiteboard, I mixed up the syntaxes between all the various languages that were swimming around in my head: my variable delcarations and my loops were in the syntaxes of 2 different languages! My brain come to a halt, as it always does around other people (especially in a high-stress situation like a job interview), so I couldn't think critically enough to solve their whiteboard exercises in a non-embarrassing amount of time, nor with a non-embarrassing amount of help. The primary interviewer was very kind, but his "bad cop" counterpart was unafraid to point out my inadequacies (even stating in the middle of the interview that I'm not getting hired), which of course didn't help my anxious brain to function (not that if he _hadn't_ said those things, it would've made a noteworthy difference to my poor performance, anyway). Their HR rep claimed in her post-interview follow-up email that the primary interviewer wanted to add me on LinkedIn, but he never accepted my LinkedIn request. Ha.
+</details>
 
 ## Requirements
 > The next step in the hiring process it to build your own implementation of a To-do (Task list) full stack web application following these guidelines:
@@ -49,128 +48,128 @@ This was my first real programming interview. It went terribly. I didn't come in
 <details><summary>Coding</summary>
 
 ##### PHP + MySQL ToDo Tutorial:
-[https://codewithawa.com/posts/to-do-list-application-using-php-and-mysql-database]()
+https://codewithawa.com/posts/to-do-list-application-using-php-and-mysql-database
 
 ##### PHP .env plugin (to store DB credentials):
-[https://github.com/vlucas/phpdotenv]()
+https://github.com/vlucas/phpdotenv
 
 ##### Encrypt/Decrypt .env contents:
-[https://www.codementor.io/@ccornutt/keeping-credentials-secure-in-php-kvcbrk55z]()
+https://www.codementor.io/@ccornutt/keeping-credentials-secure-in-php-kvcbrk55z
 
 ##### Create MySQL tables via command line:
-[https://www.tutorialspoint.com/mysql/mysql-create-tables.htm]()
+https://www.tutorialspoint.com/mysql/mysql-create-tables.htm
 
 ##### Change tutorial's incorrect `font-style: Helvetica` to `font-family: Helvetica`:
-[https://stackoverflow.com/questions/32515519/css-invalid-property-value]()
+https://stackoverflow.com/questions/32515519/css-invalid-property-value
 
 ##### Fix `due_date` incorrectly saving into databasae as `1970-01-01` every time:
-[https://stackoverflow.com/a/8984620/3511695]()
+https://stackoverflow.com/a/8984620/3511695
 
 ##### PHP+MySQL - Insert multiple records:
-[https://www.w3schools.com/php/php_mysql_insert_multiple.asp]()
+https://www.w3schools.com/php/php_mysql_insert_multiple.asp
 
 ##### Create textbox placeholder text:
-[https://stackoverflow.com/questions/108207/how-do-i-make-an-html-text-box-show-a-hint-when-empty]()
+https://stackoverflow.com/questions/108207/how-do-i-make-an-html-text-box-show-a-hint-when-empty
 
 ##### `mysqli_query` `try{}catch(){}` syntax:
-[https://www.php.net/manual/en/mysqli-driver.report-mode.php]()
+https://www.php.net/manual/en/mysqli-driver.report-mode.php
 
 ##### Update MySQL via JQuery+Ajax after datepicker `onchange`:
-[https://stackoverflow.com/a/28684832/3511695]()
+https://stackoverflow.com/a/28684832/3511695
 
 ##### JQuery - Extract value from `input` tag:
-[https://api.jquery.com/val/]()
+https://api.jquery.com/val/
 
 ##### Disable spellcheck underlines:
-[https://www.tutorialrepublic.com/faq/how-to-disable-spell-checking-in-html-forms.php]()
+https://www.tutorialrepublic.com/faq/how-to-disable-spell-checking-in-html-forms.php
 
 ##### Ternary if-else examples:
-[https://stackoverflow.com/questions/28602388/ternary-operator-in-php-with-echo-value]()
+https://stackoverflow.com/questions/28602388/ternary-operator-in-php-with-echo-value
 
 ##### Display MySQL errors (`mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in...`):
-[https://stackoverflow.com/questions/15439919/mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-given-in]()
+https://stackoverflow.com/questions/15439919/mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-given-in
 
 ##### PHP - Sort table:
-[https://codeshack.io/how-to-sort-table-columns-php-mysql/]()
+https://codeshack.io/how-to-sort-table-columns-php-mysql/
 
 ##### When data's stored in `$_GET` vs `$_POST`:
-[https://stackoverflow.com/a/42942572/3511695]()
+https://stackoverflow.com/a/42942572/3511695
 
 ##### Check if PHP `$_SESSION` is already set:
-[https://stackoverflow.com/a/10093292/3511695]()
+https://stackoverflow.com/a/10093292/3511695
 
 ##### PHP - Concatenate strings:
-[https://www.codecademy.com/forum_questions/54329217548c35920e0081b7]()
+https://www.codecademy.com/forum_questions/54329217548c35920e0081b7
 
 ##### Get URL query string:
-[https://stackoverflow.com/questions/6768793/get-the-full-url-in-php]()
+https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
 
 ##### Using prepared statements:
-[https://stackoverflow.com/a/51015777/3511695]()
+https://stackoverflow.com/a/51015777/3511695
 
 ##### Set time zone on datepicker:
-[https://stackoverflow.com/a/62542096/3511695]()
+https://stackoverflow.com/a/62542096/3511695
 
 ##### Word wrap in `<td>`:
-[https://stackoverflow.com/a/50880544/3511695]()
+https://stackoverflow.com/a/50880544/3511695
 
 ##### Prevent line break at hyphen (for `creation_date`):
-[https://stackoverflow.com/a/28928832/3511695]()
+https://stackoverflow.com/a/28928832/3511695
 
 ##### Button hover color transition:
-[https://www.w3schools.com/howto/howto_css_transition_hover.asp]()
+https://www.w3schools.com/howto/howto_css_transition_hover.asp
 
 ##### PHP - Put contents in local file:
-[https://stackoverflow.com/questions/5440912/how-to-put-the-a-string-into-a-text-file-in-php]()
+https://stackoverflow.com/questions/5440912/how-to-put-the-a-string-into-a-text-file-in-php
 
 ##### PHP - Detect OS:
-[https://stackoverflow.com/a/57843610/3511695]()
+https://stackoverflow.com/a/57843610/3511695
 </details>
 
 <details><summary>Environment Setup</summary>
 
 ##### Install PHP for NginX:
-[https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-ubuntu-18-04#]()
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-ubuntu-18-04#
 
 ##### Enable PHP IDE in Visual Studio 2019:
-[https://www.youtube.com/watch?v=uwPtcFowP94]()
+https://www.youtube.com/watch?v=uwPtcFowP94
 
 ##### Fix broken shell interactivity in PuTTY:
-[https://stackoverflow.com/questions/14837248/arrow-keys-in-putty-returning-a-d-b-instead-of-moving-the-cursor]()
+https://stackoverflow.com/questions/14837248/arrow-keys-in-putty-returning-a-d-b-instead-of-moving-the-cursor
 
 ##### Copy contents between PuTTY and host:
-[https://www.alphr.com/copy-paste-putty/]()
+https://www.alphr.com/copy-paste-putty/
 
 ##### Switch MySQL Command Line from JS mode to SQL mode:
-[https://stackoverflow.com/questions/50645402/mysql-syntaxerror-unexpected-identifier]()
+https://stackoverflow.com/questions/50645402/mysql-syntaxerror-unexpected-identifier
 
 ##### PHP project directory in WampServer:
-[http://androidcss.com/php/install-setup-php-mysql-windows/]()
+http://androidcss.com/php/install-setup-php-mysql-windows/
 
 ##### "Composer" PHP package manager installation on Windows/Linux:
-[https://getcomposer.org/doc/00-intro.md]()
+https://getcomposer.org/doc/00-intro.md
 
 ##### Reminder to allow external HTTP requests to app in web host firewall settings:
-[https://stackoverflow.com/a/19117653/3511695]()
+https://stackoverflow.com/a/19117653/3511695
 
 ##### Install JQuery:
-[https://www.w3schools.com/jquery/jquery_get_started.asp]()
+https://www.w3schools.com/jquery/jquery_get_started.asp
 
 ##### Run `.sql` script from bash:
-[https://stackoverflow.com/questions/7616520/how-to-execute-a-sql-script-from-bash]()
+https://stackoverflow.com/questions/7616520/how-to-execute-a-sql-script-from-bash
 
 ##### Run `.sql` script from `mysql>`:
-[https://stackoverflow.com/a/8940431/3511695]()
+https://stackoverflow.com/a/8940431/3511695
 </details>
 
 <details><summary>Versioning</summary>
 
 ##### Using GitHub CLI tool:
-[https://www.youtube.com/watch?v=tm9gdHd9qmE]()
+https://www.youtube.com/watch?v=tm9gdHd9qmE
 
 ##### Github `master` branch has now officially switched to `main`:
-[https://stackoverflow.com/a/67139639/3511695]()
+https://stackoverflow.com/a/67139639/3511695
 
 ##### Git Branching & Merging:
-[https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging]()
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 </details>
