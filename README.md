@@ -13,9 +13,11 @@ This was my first real programming interview. It went terribly. I didn't come in
 
 ## Requirements
 > The next step in the hiring process it to build your own implementation of a To-do (Task list) full stack web application following these guidelines:
-
+>
+> ...
+> 
 > Build the implementation in 1 week while meeting at least the minimum functionality requirements:
-
+> 
 > - View a list of to-do items with the ability to filter the list by pending, complete, and all to-dos
 > - Create a new to-do item
 > - Edit a to-do item
