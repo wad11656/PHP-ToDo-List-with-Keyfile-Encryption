@@ -1,13 +1,13 @@
 # PHP ToDo List with Keyfile Encryption
 #### Demo: http://35.197.8.81:5050 ([Archived Version (non-functional)](https://web.archive.org/web/20220904093843/http://35.197.8.81:5050/))
 
-<img src="https://raw.githubusercontent.com/wad11656/kadince_todo/main/Demo.gif" width="500"/>
+<img src="https://raw.githubusercontent.com/wad11656PHP-ToDo-List-with-Keyfile-Encryption/main/Demo.gif" width="500"/>
 
 ## Background
-This was for the coding challenge that a software development company administered to me (pre-ChatGPT). They were unimpressed (visibly confused/judgmental) with the decision to use PHP and, other than that, didn't talk about this code at all in the interview. Admittedly, when they asked me why I chose PHP, I told them it was because it was used in the most accessible guide I found on Google (the first link under [Resources](https://github.com/wad11656/kadince_todo/blob/main/README.md#resources)) when I searched for guides on creating a web page with a ToDo list using MySQL (the db structure I'm most familiar with). Derp! Obviously I should have researched which frameworks were most popular and built my project off one of those. Nevertheless, I was proud of the work I did, and how conscientious I was in adding security and quality-of-life implementations that were not asked for (which implementations were never brought up in the interview):
+This was for the coding challenge that a software development company administered to me (pre-ChatGPT). They were unimpressed (visibly confused/judgmental) with the decision to use PHP and, other than that, didn't talk about this code at all in the interview. Admittedly, when they asked me why I chose PHP, I told them it was because it was used in the most accessible guide I found on Google (the first link under [Resources](https://github.com/wad11656/PHP-ToDo-List-with-Keyfile-Encryption/blob/main/README.md#resources)) when I searched for guides on creating a web page with a ToDo list using MySQL (the db structure I'm most familiar with). Derp! Obviously I should have researched which frameworks were most popular and built my project off one of those. Nevertheless, I was proud of the work I did, and how conscientious I was in adding security and quality-of-life implementations that were not asked for (which implementations were never brought up in the interview):
 
- - I went the extra mile to learn how to encrypt the database credentials into a keyfile, then store that file on the server outside of the site's directory (so it couldn't be accessed from potential hackers on the web site itself), which steps to reproduce are in the [Setup](https://github.com/wad11656/kadince_todo/blob/main/README.md#setup) instructions below.
-  - I also made careful efforts to document all the resources I used to put this project together (under [Resources](https://github.com/wad11656/kadince_todo/blob/main/README.md#resources)).
+ - I went the extra mile to learn how to encrypt the database credentials into a keyfile, then store that file on the server outside of the site's directory (so it couldn't be accessed from potential hackers on the web site itself), which steps to reproduce are in the [Setup](https://github.com/wad11656/PHP-ToDo-List-with-Keyfile-Encryption/blob/main/README.md#setup) instructions below.
+  - I also made careful efforts to document all the resources I used to put this project together (under [Resources](https://github.com/wad11656/PHP-ToDo-List-with-Keyfile-Encryption/blob/main/README.md#resources)).
   - I also went the extra step of limiting the datepicker to dates from today, onwards.
   - I also used [Prepared Statements](https://www.w3schools.com/php/php_mysql_prepared_statements.asp) to try to prevent SQL injections.
 
@@ -30,7 +30,7 @@ This was my first real programming interview. It went terribly. I didn't come in
 
 ## Setup
 
-1. Run `git clone https://github.com/wad11656/kadince_todo.git` where you want the project directory to be stored.
+1. Run `git clone https://github.com/wad11656/PHP-ToDo-List-with-Keyfile-Encryption.git` where you want the project directory to be stored.
 2. Edit `create_table.sql` and replace `mydatabase`(x2), `mydbuser`, `myserver`, and `mypass` with your respective database credentials.
 3. Execute the commands in `create_table.sql` on your server, either in a MySQL front-end or the `mysql` console.
 4. **(Unix only)** From your site root directory, run `sudo mkdir ../env` and assign the new directory privileges to allow one of this site's `php` pages to write a file to it.
