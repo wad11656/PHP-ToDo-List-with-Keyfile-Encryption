@@ -1,7 +1,7 @@
 # PHP ToDo List with Keyfile Encryption
 #### Demo: http://35.197.8.81:5050 ([Archived Version (non-functional)](https://web.archive.org/web/20220904093843/http://35.197.8.81:5050/))
 
-<img src="https://raw.githubusercontent.com/wad11656PHP-ToDo-List-with-Keyfile-Encryption/main/Demo.gif" width="500"/>
+<img src="https://raw.githubusercontent.com/wad11656/PHP-ToDo-List-with-Keyfile-Encryption/main/Demo.gif" width="500"/>
 
 ## Background
 This was for the coding challenge that a software development company administered to me (pre-ChatGPT). They were unimpressed (visibly confused/judgmental) with the decision to use PHP and, other than that, didn't talk about this code at all in the interview. Admittedly, when they asked me why I chose PHP, I told them it was because it was used in the most accessible guide I found on Google (the first link under [Resources](https://github.com/wad11656/PHP-ToDo-List-with-Keyfile-Encryption/blob/main/README.md#resources)) when I searched for guides on creating a web page with a ToDo list using MySQL (the db structure I'm most familiar with). Derp! Obviously I should have researched which frameworks were most popular and built my project off one of those. Nevertheless, I was proud of the work I did, and how conscientious I was in adding security and quality-of-life implementations that were not asked for (which implementations were never brought up in the interview):
